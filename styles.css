@@ -188,17 +188,20 @@ textarea {
   right: 0;
   pointer-events: none;
   z-index: 2;
-  background: #120b08;
+  background:
+    radial-gradient(circle at 10% 14%, rgba(255, 100, 38, 0.26), transparent 22rem),
+    radial-gradient(circle at 84% 12%, rgba(255, 180, 87, 0.18), transparent 18rem),
+    linear-gradient(180deg, #100907 0%, #050303 100%);
 }
 
 .site-frame::before {
   top: 0;
-  height: calc(var(--safe-top) + 2px);
+  height: var(--safe-top);
 }
 
 .site-frame::after {
   bottom: 0;
-  height: calc(var(--safe-bottom) + 2px);
+  height: var(--safe-bottom);
 }
 
 main {
