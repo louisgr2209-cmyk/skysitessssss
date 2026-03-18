@@ -90,7 +90,7 @@ body::before {
 }
 
 body::after {
-  background: radial-gradient(circle at center, transparent 42%, rgba(5, 3, 3, 0.24) 100%);
+  display: none;
 }
 
 a {
@@ -178,6 +178,27 @@ textarea {
   max-width: 100%;
   margin: 0;
   overflow-x: clip;
+}
+
+.site-frame::before,
+.site-frame::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 2;
+  background: #120b08;
+}
+
+.site-frame::before {
+  top: 0;
+  height: calc(var(--safe-top) + 2px);
+}
+
+.site-frame::after {
+  bottom: 0;
+  height: calc(var(--safe-bottom) + 2px);
 }
 
 main {
